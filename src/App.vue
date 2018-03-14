@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <MasterPage />
+    <Header />
+    <Content />
   </div>
 </template>
 
 <script>
-import MasterPage from './components/main/MasterPage.vue'
+import Header from './components/main/Header.vue'
+import Content from './components/main/Content.vue'
 
 export default {
   name: 'app',
   components: {
-    MasterPage
+    Header,
+    Content
   }
 }
 </script>
