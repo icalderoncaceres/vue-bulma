@@ -14,17 +14,22 @@
           </div>
           <div id="navMenu" class="navbar-menu">
             <div class="navbar-start">
-              <a class="navbar-item" :href="option.target" v-for="option in options">
+              <a class="navbar-item" :href="option.target" v-for="option in options" :key="option.id">
                 {{option.title}}
               </a>
             </div>
 
+            <div class="navbar-start">
+                <Searcher />
+            </div>            
           </div>
         </div>
     </nav>
 </template>
 
 <script>
+
+import Searcher from '../form/Searcher.vue'
 export default {
   name: 'Header',
   props: {
@@ -37,6 +42,9 @@ export default {
         {id:2,title:'Settings',target:'#'}
       ]    
     }
+  },
+  components:{
+    Searcher
   }
 }
 </script>

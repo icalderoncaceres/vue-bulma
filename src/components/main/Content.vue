@@ -2,40 +2,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-3">
-          <aside class="menu">
-            <p class="menu-label">
-              General
-            </p>
-            <ul class="menu-list">
-              <li><a class="is-active">Dashboard</a></li>
-              <li><a>Customers</a></li>
-            </ul>
-            <p class="menu-label">
-              Administration
-            </p>
-            <ul class="menu-list">
-              <li><a>Team Settings</a></li>
-              <li>
-                <a>Manage Your Team</a>
-                <ul>
-                  <li><a>Members</a></li>
-                  <li><a>Plugins</a></li>
-                  <li><a>Add a member</a></li>
-                </ul>
-              </li>
-              <li><a>Invitations</a></li>
-              <li><a>Cloud Storage Environment Settings</a></li>
-              <li><a>Authentication</a></li>
-            </ul>
-            <p class="menu-label">
-              Transactions
-            </p>
-            <ul class="menu-list">
-              <li><a>Payments</a></li>
-              <li><a>Transfers</a></li>
-              <li><a>Balance</a></li>
-            </ul>
-          </aside>
+          <VerticalMenu />
         </div>
         <div class="column is-9">
           <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -159,54 +126,10 @@
             </div>
             <div class="column is-6">
               <div class="card">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    Inventory Search
-                  </p>
-                  <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                      <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </a>
-                </header>
-                <div class="card-content">
-                  <div class="content">
-                    <div class="control has-icons-left has-icons-right">
-                      <input class="input is-large" type="text" placeholder="">
-                      <span class="icon is-medium is-left">
-                        <i class="fa fa-search"></i>
-                      </span>
-                      <span class="icon is-medium is-right">
-                        <i class="fa fa-check"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                  <Searcher />
               </div>
               <div class="card">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    User Search
-                  </p>
-                  <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                      <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </a>
-                </header>
-                <div class="card-content">
-                  <div class="content">
-                    <div class="control has-icons-left has-icons-right">
-                      <input class="input is-large" type="text" placeholder="">
-                      <span class="icon is-medium is-left">
-                        <i class="fa fa-search"></i>
-                      </span>
-                      <span class="icon is-medium is-right">
-                        <i class="fa fa-check"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                  <Searcher />
               </div>
             </div>
           </div>
@@ -216,9 +139,15 @@
 </template>
 
 <script>
+import Searcher from '../form/Searcher.vue'
+import VerticalMenu from '../panel/VerticalMenu.vue'
 export default {
   name: 'Content',
   props: {
+  },
+  components:{
+    Searcher,
+    VerticalMenu
   }
 }
 </script>
