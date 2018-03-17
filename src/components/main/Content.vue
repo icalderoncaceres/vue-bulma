@@ -126,10 +126,10 @@
             </div>
             <div class="column is-6">
               <div class="card">
-                  <Searcher />
+                  <Searcher title="Buscador 1" />
               </div>
               <div class="card">
-                  <Searcher />
+                  <Searcher  title="Buscador 2"/>
               </div>
             </div>
           </div>
